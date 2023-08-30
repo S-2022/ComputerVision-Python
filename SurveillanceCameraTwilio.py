@@ -1,6 +1,7 @@
 import cv2
 from twilio.rest import Client
 #create a twilio account
+#make sure droid cam is installed in both the server running the code as well as the remote camera device
 account_sid = '----------------------------------'
 auth_token = '--------------------------------'
 #get account_sid and auth_toke from twilio account
@@ -17,6 +18,7 @@ def sms(sending):
                               #enter number to which message should be sent
                           )
 v=cv2.VideoCapture('http://---.---.--.---:4747/mjpegfeed?640x480')
+#Enter IP address of the remote camera
 #v=cv2.VideoCapture(0)
 r,f1=v.read()
 r,f2=v.read()
